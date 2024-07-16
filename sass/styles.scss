@@ -45,7 +45,17 @@ $border-radius: 15px;
 }
 
 .btn{
-    margin: 20px 0 20px 0;
+    margin: 40px 0 20px 0;
 }
+
+.score-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .btn-score {
+    margin: 10px;
+  }
 
 @import "../node_modules/bootstrap/scss/bootstrap";

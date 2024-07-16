@@ -1,0 +1,8 @@
+# Excloure la carpeta 'node_modules'
+node_modules/
+
+# Excloure l'arxiu package.json
+package.json
+
+#Excloure l'arxiu package-lock.json
+package-lock.json

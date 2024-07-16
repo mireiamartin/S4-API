@@ -1,0 +1,51 @@
+$card-border-width: none;
+$primary: #52cee1;
+$card-cap-bg: #fff;
+$card-height: auto;
+$btn-color: white ;
+$border-radius: 15px;
+
+.container-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imagen-fondo{
+    top: 0;
+    left: 0;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.card {
+    width: 50%;
+    height: $card-height;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 11px 2px rgba(138,138,138,1);
+    border-radius: $border-radius;
+    background-color: #fff;
+}
+
+.card-header{
+    background-color: $card-cap-bg;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.card-body{
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.btn{
+    margin: 20px 0 20px 0;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

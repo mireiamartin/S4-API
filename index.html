@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>Dad Jokes</title>
 </head>
+
 <body>
 
-    <section id="contenido">
-        <div class="col">
-            <p id="jokeContent"></p>
-        </div>
-        <div id="button">
-            <button id= "nextJoke" type="button">Next Joke</button>
+    <img class="imagen-fondo" src="images/girls.jpg" alt="chicas-riendo">
+    <div class="weather mt-4 mx-4">
+        <p>Avui: parcialment ennuvolat</p>
+    </div>
+
+    <section class="container-lg">
+        <div class="card">
+            <div class="card-header">
+                <h5> Preparat per riure? 🤣</h5>
+            </div>
+            <div class="card-body">
+                <p id="jokeContent"></p>
+            </div>
+            <div id="button">
+                <button class="btn btn-primary px-4 py-2" id="nextJoke" type="button">Següent acudit</button>
+            </div>
         </div>
     </section>
 
     <script src="main.js"></script>
+
 </body>
+
 </html>

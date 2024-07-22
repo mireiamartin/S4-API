@@ -36,15 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     apiJoke();
     nextJokeButton.addEventListener('click', apiJoke);
 });
-// Declaración de un arreglo global para guardar las puntuaciones
-let scores = [];
+// Declaración de un array global para guardar las puntuaciones
 function saveScore(puntuacion) {
     //Obtener el último chiste del array
     const lastJoke = reportAcudits.length - 1;
     if (lastJoke >= 0) {
         reportAcudits[lastJoke].score = puntuacion;
     }
-    scores.push(puntuacion);
     console.log(reportAcudits);
 }
 const buttonScore1 = document.getElementById('button1');

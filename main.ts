@@ -1,5 +1,11 @@
+interface JokeReport {
+    joke: string;
+    score?: number;
+    date: string;
+}
+
 // Declaración global array jokes
-const reportAcudits: { joke: string, score?: number, date: string }[] = [];
+const reportAcudits: JokeReport[] = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     const jokeContent = document.querySelector('#jokeContent') as HTMLElement;
@@ -18,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             jokeContent.innerHTML = randomJoke;
 
             const currentDate = new Date().toISOString();
-            const currentJoke = { joke: randomJoke, date: currentDate };
+            const currentJoke: JokeReport = { joke: randomJoke, date: currentDate };
             reportAcudits.push(currentJoke);
             console.log(reportAcudits);
         } catch (error) {
@@ -31,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextJokeButton.addEventListener('click', apiJoke);
 });
 
-// Declaración de un arreglo global para guardar las puntuaciones
-let scores: number[] = [];
-
+// Declaración de un array global para guardar las puntuaciones
 function saveScore(puntuacion: number) {
 
     //Obtener el último chiste del array
@@ -41,8 +45,6 @@ function saveScore(puntuacion: number) {
     if (lastJoke >= 0) {
         reportAcudits[lastJoke].score = puntuacion;
     }
-
-    scores.push(puntuacion);
 
     console.log(reportAcudits);
 }
